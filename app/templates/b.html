@@ -40,7 +40,15 @@
 
 <script type="text/javascript">
 
-	// your solution here
+  $(document).ready(() => {
+    let timerID = setInterval(() => {
+      $('.shape-container').append('<div class="p2-circle bg-blue"></div>');
+    }, 1000);
+    
+    $('.btn').on('click', () => {
+      clearInterval(timerID);
+    });
+  });
 
 </script>
 </body>
